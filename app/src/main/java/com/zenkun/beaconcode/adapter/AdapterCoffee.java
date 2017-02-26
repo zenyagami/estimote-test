@@ -33,7 +33,10 @@ public class AdapterCoffee extends RecyclerView.Adapter<AdapterCoffee.ViewHolder
         ModelCoffee coffee =list.get(position);
         holder.mPhoto.setImageResource(coffee.resourcePhoto);
         holder.mTitle.setText(coffee.title);
-        holder.mSubTitle.setText(coffee.subTitle);
+        holder.mPromo.setText(coffee.isStarred?R.string.free_coffee : R.string.need_points);
+        holder.mPromo.setTextColor(holder.mPromo.getContext().getResources().getColor(coffee.isStarred?R.color.color_promo_on : R.color.color_promo_off));
+        holder.mStar.setCompoundDrawablesWithIntrinsicBounds(0,0,coffee.isStarred?R.drawable.ic_star: R.drawable.ic_star_off,0);
+
     }
 
     @Override
@@ -43,12 +46,14 @@ public class AdapterCoffee extends RecyclerView.Adapter<AdapterCoffee.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder{
         // each data item is just a string in this case
         public TextView mTitle;
-        public TextView mSubTitle;
+        public TextView mStar;
+        public TextView mPromo;
         public ImageView mPhoto;
         public ViewHolder(View v) {
             super(v);
             mTitle = (TextView)v.findViewById(R.id.adapter_coffee_title);
-            mSubTitle = (TextView)v.findViewById(R.id.adapter_coffee_subtitle);
+            mPromo = (TextView)v.findViewById(R.id.adapter_row_promo);
+            mStar = (TextView)v.findViewById(R.id.adapter_row_star);
             mPhoto = (ImageView) v.findViewById(R.id.adapter_coffee_photo);
         }
 

@@ -16,7 +16,7 @@ import java.util.Random;
 public class Utils {
     //hardcoded for demo purpose
     public static final String[] title= new String[]{"Extra Espresso","Cafe Latte","Chocolate"};
-    public static final int[] drawableResources= new int[]{R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher};
+    public static final int[] drawableResources= new int[]{R.drawable.latte,R.drawable.chocolate,R.drawable.chocolate};
 
     public static List<ModelCoffee> getRandomCoffeData()
     {
@@ -29,7 +29,7 @@ public class Utils {
             ModelCoffee m = new ModelCoffee();
             int ran1 =random.nextInt(randomSize);
             int ran2 =random.nextInt(randomSize);
-            m.subTitle = title[ran1];
+            m.title = title[ran1];
             //Log.v("TAG",""+ran1);
             //Log.v("TAG",""+ran2);
             m.resourcePhoto = drawableResources[ran2];
