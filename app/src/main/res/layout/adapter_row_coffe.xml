@@ -6,6 +6,8 @@
     android:layout_marginTop="@dimen/margin_m"
     android:layout_marginLeft="@dimen/margin_l"
     android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
     android:background="?selectableItemBackground"
     android:layout_marginRight="@dimen/margin_l"
     android:layout_gravity="center"
