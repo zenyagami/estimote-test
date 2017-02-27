@@ -24,6 +24,8 @@ public class Utils {
         //title and drawable resource should be the same size...
         int randomSize = title.length;
         List<ModelCoffee> list= new ArrayList<>();
+        //we need add one more for header (empty)
+        list.add(null);
         for (int i=0;i<5;i++)
         {
             ModelCoffee m = new ModelCoffee();
