@@ -26,15 +26,16 @@ public class Utils {
         List<ModelCoffee> list= new ArrayList<>();
         //we need add one more for header (empty)
         list.add(null);
+
+        int ran1 = random.nextInt(randomSize);
         for (int i=0;i<5;i++)
         {
             ModelCoffee m = new ModelCoffee();
-            int ran1 =random.nextInt(randomSize);
-            //int ran2 =random.nextInt(randomSize);
             m.title = title[ran1];
             m.resourcePhoto = drawableResources[ran1];
             m.isStarred = (i<= randomSize/3); //just the first  1/3 of  the list are starred
             list.add(m);
+            ran1 =random.nextInt(randomSize);
         }
         return list;
     }
