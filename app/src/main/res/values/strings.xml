@@ -97,4 +97,5 @@
     <string name="need_points">You need 40 points</string>
     <string name="title_points">Your points</string>
     <string name="app_main_title">Loyality App</string>
+    <string name="coffe_list_header">Available offers</string>
 </resources>
