@@ -16,7 +16,7 @@ import java.util.Random;
 public class Utils {
     //hardcoded for demo purpose
     public static final String[] title= new String[]{"Extra Espresso","Cafe Latte","Chocolate"};
-    public static final int[] drawableResources= new int[]{R.drawable.latte,R.drawable.chocolate,R.drawable.chocolate};
+    public static final int[] drawableResources= new int[]{R.drawable.espresso,R.drawable.latte,R.drawable.chocolate};
 
     public static List<ModelCoffee> getRandomCoffeData()
     {
@@ -24,16 +24,14 @@ public class Utils {
         //title and drawable resource should be the same size...
         int randomSize = title.length;
         List<ModelCoffee> list= new ArrayList<>();
-        for (int i=0;i<6;i++)
+        for (int i=0;i<5;i++)
         {
             ModelCoffee m = new ModelCoffee();
             int ran1 =random.nextInt(randomSize);
-            int ran2 =random.nextInt(randomSize);
+            //int ran2 =random.nextInt(randomSize);
             m.title = title[ran1];
-            //Log.v("TAG",""+ran1);
-            //Log.v("TAG",""+ran2);
-            m.resourcePhoto = drawableResources[ran2];
-            m.isStarred =i%2==0;
+            m.resourcePhoto = drawableResources[ran1];
+            m.isStarred = (i< 6/3); //just the first  1/3 of  the list are starred
             list.add(m);
         }
         return list;

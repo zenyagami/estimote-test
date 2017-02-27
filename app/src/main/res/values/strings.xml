@@ -95,4 +95,6 @@
     <string name="coffe_sutitle">Add a little kick to your coffee\nlorem ipsum dolores.</string>
     <string name="free_coffee">Order for free!</string>
     <string name="need_points">You need 40 points</string>
+    <string name="title_points">Your points</string>
+    <string name="app_main_title">Loyality App</string>
 </resources>

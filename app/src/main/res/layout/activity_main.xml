@@ -11,10 +11,55 @@
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         app:theme="@style/ActionBarThemeOverlay"
-        android:id="@+id/toolbar_actionbar"
+        android:id="@+id/toolbar"
         android:background="?colorPrimary"
         app:layout_collapseMode="pin"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize" />
+    <LinearLayout
+        android:background="?colorPrimary"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+        <!--hardcoded some strings or color, demo app-->
+        <TextView
+            android:textColor="#BFFFFFFF"
+            android:gravity="center"
+            android:text="@string/title_points"
+            android:layout_marginTop="@dimen/margin_l"
+            android:textAllCaps="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_marginTop="@dimen/margin_l"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_points"
+                android:textStyle="bold"
+                android:textSize="42sp"
+                android:textColor="@android:color/white"
+                android:text="0"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_star"
+                android:layout_toRightOf="@id/text_points"
+                android:layout_width="62dp"
+                android:layout_height="62dp" />
+        </RelativeLayout>
 
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/content_coffe_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 </LinearLayout>
