@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.zenkun.beaconcode.adapter.AdapterCoffee;
 import com.zenkun.beaconcode.util.Utils;
 
-public class ScrollingActivity extends AppCompatActivity {
+public class ScrollingActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class ScrollingActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         AdapterCoffee adapterCoffee = new AdapterCoffee(Utils.getRandomCoffeData());
         mRecyclerView.setAdapter(adapterCoffee);
+        findViewById(R.id.main_close_help).setOnClickListener(this);
 
     }
 
@@ -50,5 +51,20 @@ public class ScrollingActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.main_close_help:
+                closeHelperView();
+                break;
+        }
+    }
+
+    private void closeHelperView() {
+        //TODO maybe store in preferences to not show this view every time....
+        findViewById(R.id.view_help_holder).setVisibility(View.GONE);
     }
 }

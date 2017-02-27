@@ -27,12 +27,12 @@
             android:textColor="#BFFFFFFF"
             android:gravity="center"
             android:text="@string/title_points"
-            android:layout_marginTop="@dimen/margin_l"
+            android:layout_marginTop="@dimen/margin_m"
             android:textAllCaps="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <RelativeLayout
-            android:layout_marginTop="@dimen/margin_l"
+            android:layout_marginTop="@dimen/margin_m"
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:layout_width="match_parent"
@@ -40,23 +40,75 @@
             <TextView
                 android:id="@+id/text_points"
                 android:textStyle="bold"
-                android:textSize="42sp"
+                android:textSize="62sp"
                 android:textColor="@android:color/white"
                 android:text="0"
                 android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <ImageView
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_centerVertical="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_star"
+                android:src="@drawable/ic_grade_points"
                 android:layout_toRightOf="@id/text_points"
-                android:layout_width="62dp"
-                android:layout_height="62dp" />
+                android:layout_width="42dp"
+                android:layout_height="42dp" />
         </RelativeLayout>
 
 
     </LinearLayout>
 
+    <LinearLayout
+        android:animateLayoutChanges="true"
+        android:id="@+id/view_help_holder"
+        android:padding="@dimen/margin_l"
+        android:layout_width="match_parent"
+        android:background="#FFD740"
+        android:layout_height="95dp">
+        <View
+            android:background="@drawable/circle_view"
+            android:layout_gravity="center_vertical"
+            android:layout_width="56dp"
+            android:layout_height="56dp"/>
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_l"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="@dimen/margin_l"
+                    android:text="@string/earn_points_title"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content" />
+                <!--should be at least 42dp but we are leaving 20dp for now-->
+                <ImageButton
+                    android:id="@+id/main_close_help"
+                    android:background="?selectableItemBackground"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_close"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+
+            <TextView
+                android:text="@string/earn_points_subtitle"
+                android:layout_marginTop="@dimen/margin_m"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/content_coffe_list"
