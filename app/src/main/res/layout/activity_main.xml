@@ -62,21 +62,23 @@
     <LinearLayout
         android:animateLayoutChanges="true"
         android:id="@+id/view_help_holder"
-        android:padding="@dimen/margin_l"
+        android:padding="@dimen/margin_m"
         android:layout_width="match_parent"
         android:background="#FFD740"
         android:layout_height="95dp">
         <View
+            android:layout_marginLeft="@dimen/margin_m"
             android:background="@drawable/circle_view"
             android:layout_gravity="center_vertical"
             android:layout_width="56dp"
             android:layout_height="56dp"/>
         <LinearLayout
+            android:layout_marginRight="@dimen/margin_m"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="@dimen/margin_l"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content">
             <LinearLayout
                 android:orientation="horizontal"
@@ -102,10 +104,14 @@
             </LinearLayout>
 
             <TextView
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:layout_marginRight="@dimen/margin_l"
+                android:maxLines="3"
                 android:text="@string/earn_points_subtitle"
-                android:layout_marginTop="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_s"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent" />
         </LinearLayout>
 
     </LinearLayout>
