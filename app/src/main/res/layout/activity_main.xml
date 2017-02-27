@@ -23,6 +23,7 @@
         android:layout_height="130dp">
         <!--hardcoded some strings or color, demo app-->
         <TextView
+            android:textStyle="bold"
             android:textColor="#BFFFFFFF"
             android:gravity="center"
             android:text="@string/title_points"

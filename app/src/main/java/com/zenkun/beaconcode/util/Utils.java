@@ -31,7 +31,7 @@ public class Utils {
             //int ran2 =random.nextInt(randomSize);
             m.title = title[ran1];
             m.resourcePhoto = drawableResources[ran1];
-            m.isStarred = (i< 6/3); //just the first  1/3 of  the list are starred
+            m.isStarred = (i<= randomSize/3); //just the first  1/3 of  the list are starred
             list.add(m);
         }
         return list;
